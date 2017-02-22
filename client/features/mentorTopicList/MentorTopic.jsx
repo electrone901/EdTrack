@@ -77,6 +77,7 @@ const MentorTopic = React.createClass({
 					<div id="mentorTop-cont">
 					{
 						(this.state.mentor)
+
 							? <div>
 							<br/>
 							<h3 id="prof-Name"> {this.state.mentor.name} is familiar with these topics:</h3>
@@ -84,6 +85,7 @@ const MentorTopic = React.createClass({
 								<p key={indx}>{topic.name}<i className="material-icons right" id="check-btn">checked</i></p>
 							)}
 						</div>
+
 							: <p>loading profile...</p>
 					}
 
