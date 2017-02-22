@@ -11,6 +11,7 @@ const MentorTopic = React.createClass({
 		};
 	},
 
+
 	componentDidMount(){
 		axios.get('/api/topic/')
 			.then((topicData) => this.setState({
@@ -26,15 +27,30 @@ const MentorTopic = React.createClass({
 		}));
 	},
 
-	handleChange(event) {
-		console.log('click1', event.target.value)
-		let topicName = event.target.value;
+	logger(event) {
+		let topicName = event.target.name;
 		let selected = this.state.selectedTopics;
-		(!event.target.checked)
+		(!event.target.name)
 			? this.setState({selectedTopics: selected.filter(topic => parseInt(topic) != parseInt(topicName))})
 			: this.setState({selectedTopics: [...selected, parseInt(topicName)]});
-			console.log('click1', event.target.value)
+			console.log('selectedTopics1', selectedTopics)
 	},
+
+
+	// handleChange(event) {
+	// 	console.log('click1', event.target.value)
+	// 	let topicName = event.target.name;
+	// 	selectedTopics.push(parseInt(topicName));
+	// 	console.log('push1', selectedTopics)
+
+
+		// let topicName = event.target.value;
+		// let selected = this.state.selectedTopics;
+		// (!event.target.checked)
+		// 	? this.setState({selectedTopics: selected.filter(topic => parseInt(topic) != parseInt(topicName))})
+		// 	: this.setState({selectedTopics: [...selected, parseInt(topicName)]});
+		// 	console.log('selectedTopics1', selectedTopics)
+	// },
 	onSubmit(){
 		let stringify = JSON.stringify(this.state.selectedTopics);
 		axios.post('/api/mentor/' + this.props.mentorId + '/topic',
@@ -54,6 +70,8 @@ const MentorTopic = React.createClass({
 	});
 
 		console.log('mentor whatever', this.props.mentor)
+		console.log('push1', this.state.selectedTopics)
+		console.log('state1', this.state.topics)
 		return (
 			<div className="col s4">
 					<div id="mentorTop-cont">
@@ -79,7 +97,7 @@ const MentorTopic = React.createClass({
 								<li key={indx}>
 
 									{/*<input type="checkbox" id={topic.id} value={topic.id} onChange={this.handleChange}/>*/}
-										<input style={TopicsBtn} className="topicBtn" type="button" id={topic.id} name={topic.id} value={topic.name} onClick={this.handleChange}/>
+										<input style={TopicsBtn} className="topicBtn" type="button" id={topic.id} name={topic.id} value={topic.name} onClick={this.logger}/>
 								</li>
 							))
 								: <p>loading list...</p>
