@@ -10,7 +10,7 @@ Instructors will be able to assign and request assignments from students, set de
 
 Managers will be able to view the class progress, student progress, and associate it with the instructor. Possible functionality can be to view all feedback and job search.
 
-##https://projects.invisionapp.com/share/QYAU9R9MA#/screens
+## View Demo Design https://projects.invisionapp.com/share/QYAU9R9MA#/screens
 
 
 ## Database Setup
