@@ -1,6 +1,5 @@
 # EdTrack
 
-##Objective
 EdTrack is a versatile performance tracking tool that alleviates the burden on overworked teachers, oversized classrooms, and students to better track and learn from their performance.
 
 There will be three different account levels: manager, instructor, and student.
@@ -10,6 +9,8 @@ The student will be able to log in which will account for attendence, turn in th
 Instructors will be able to assign and request assignments from students, set deadlines, enter grades, view student progress as a graph and also class progress as well. Possible functionality  can be student feedback, view and edit student job search.
 
 Managers will be able to view the class progress, student progress, and associate it with the instructor. Possible functionality can be to view all feedback and job search.
+
+##https://projects.invisionapp.com/share/QYAU9R9MA#/screens
 
 
 ## Database Setup
